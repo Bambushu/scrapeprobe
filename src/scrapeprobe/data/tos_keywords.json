@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "note": "TOS / Terms-of-Service candidate paths and scraping-relevant keywords. Multilingual.",
+    "license": "MIT"
+  },
+  "candidate_paths": [
+    "/terms",
+    "/terms/",
+    "/terms-of-service",
+    "/terms-of-use",
+    "/terms-and-conditions",
+    "/tos",
+    "/legal",
+    "/legal/",
+    "/legal/terms",
+    "/legal/notice",
+    "/legal-notice",
+    "/impressum",
+    "/datenschutz",
+    "/agb",
+    "/nutzungsbedingungen",
+    "/voorwaarden",
+    "/algemene-voorwaarden",
+    "/disclaimer",
+    "/conditions",
+    "/conditions-generales",
+    "/conditions-d-utilisation",
+    "/mentions-legales",
+    "/cgu",
+    "/cgv",
+    "/aviso-legal",
+    "/condiciones",
+    "/terminos",
+    "/termini",
+    "/condizioni"
+  ],
+  "keywords": {
+    "en": [
+      "scrap[ei]",
+      "crawl(?:er|ing)?",
+      "robot(?:s)?",
+      "spider(?:s|ing)?",
+      "automated\\s+(?:means|access|tool|agent|system)",
+      "harvest(?:ing)?",
+      "data[\\s-]mining",
+      "rate[\\s-]limit",
+      "user[\\s-]agent",
+      "API\\s+(?:access|key|terms)",
+      "without\\s+(?:our\\s+)?(?:express|prior|written)\\s+(?:consent|permission)",
+      "monitor(?:ing)?\\s+(?:traffic|requests)"
+    ],
+    "de": [
+      "automat(?:isiert|ische[rn]?)?",
+      "Roboter",
+      "Crawl(?:er|ing)?",
+      "Scrap(?:ing|er)",
+      "automatisierter?\\s+Zugriff",
+      "Datenabgriff",
+      "ohne\\s+(?:ausdrückliche|vorherige|schriftliche)\\s+(?:Zustimmung|Erlaubnis|Genehmigung)",
+      "Datenextrak(?:tion|tor)"
+    ],
+    "nl": [
+      "geautomatiseerd",
+      "scrapen|scrape",
+      "crawl(?:en|er|ing)?",
+      "robot(?:s|isch)?",
+      "zonder\\s+(?:onze\\s+)?(?:uitdrukkelijke|voorafgaande|schriftelijke)\\s+toestemming",
+      "data\\s*verzamel(?:en|ing)"
+    ],
+    "fr": [
+      "scrap(?:ing|er|age)",
+      "crawl(?:age|er|eur)?",
+      "extraction\\s+(?:automatique|automatis[ée]e?)",
+      "moyen\\s+automatis[ée]?",
+      "robot(?:s)?",
+      "agent\\s+automatique",
+      "sans\\s+(?:notre\\s+)?(?:autorisation|accord)\\s+(?:expresse?|préalable|écrite?)"
+    ],
+    "es": [
+      "scraping|scrap(?:ear|eo)",
+      "rastreo\\s+(?:automatizado|automático)",
+      "extracción\\s+(?:automatizada|automática)",
+      "agente\\s+automa(?:tizad|tic)o",
+      "sin\\s+(?:nuestro\\s+)?(?:expreso|previo|escrito)\\s+(?:consentimiento|permiso)"
+    ],
+    "it": [
+      "scraping",
+      "raccolta\\s+(?:automatizzata|automatica)",
+      "estrazione\\s+(?:automatizzata|automatica)",
+      "agente\\s+automa(?:tizzato|tico)",
+      "senza\\s+(?:il\\s+nostro\\s+)?(?:espresso|preventivo|scritto)\\s+consenso"
+    ]
+  }
+}

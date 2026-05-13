@@ -1,0 +1,236 @@
+{
+  "target_url": "https://opentender.eu/",
+  "target_host": "opentender.eu",
+  "started_at": "2026-05-13T11:36:21.471800+00:00",
+  "finished_at": "2026-05-13T11:36:25.633780+00:00",
+  "duration_s": 4.162,
+  "scrapeprobe_version": "0.1.0",
+  "probes": {
+    "robots": {
+      "name": "robots",
+      "status": "partial",
+      "findings": {
+        "present": false,
+        "http_status": 403,
+        "user_agent_rules": {},
+        "sitemaps": [],
+        "disallow_all": false,
+        "crawl_delay_s": null
+      },
+      "evidence": [
+        {
+          "url": "https://opentender.eu/robots.txt",
+          "status_code": 403,
+          "snippet": "\u001bd\u0015\u0000d����~YopzGi��ڳ �( \b���<EQ��P 8��گM����3�f�����%���'m\"Ze:U-1D�%2�\u0011)1\u0013\u001a\t\u001bC��9\u0011\u000f�d���\u0012���\b���U�/\u0007�\u0018\u001f���]�\u0015��1��׶�1\u0001\b�{\u001dH��\"&�&#c�\b�ق�\u0011�j��#ȋ`��Ư�5e��!�8�\u0002�h9�O��<i~��(\u000f���B\r\u0003HG{��L�\n����7�!�В\u001eĖ@��Ij\u001a��^�Ǧ\u0007�,2�+H��\u0007;[\u0014e��q/��&\u0000�y��BtL�ʙ�,�",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.138
+    },
+    "antibot": {
+      "name": "antibot",
+      "status": "blocked",
+      "findings": {
+        "wafw00f": {
+          "detected": true,
+          "identified": [
+            "Cloudflare (Cloudflare Inc.)"
+          ],
+          "generic_signal": false
+        },
+        "signature_matches": [
+          {
+            "name": "Cloudflare WAF (Pro+)",
+            "severity": "high",
+            "matched_on": [
+              "header:cf-mitigated"
+            ],
+            "note": "Cloudflare with bot fight mode or managed challenge active. JS challenge or Turnstile may be in the path."
+          },
+          {
+            "name": "Cloudflare CDN (passive)",
+            "severity": "low",
+            "matched_on": [
+              "header:cf-ray",
+              "header:server"
+            ],
+            "note": "Cloudflare in front but no active challenge on this page. Often just CDN + DDoS, not bot detection."
+          }
+        ],
+        "overall_severity": "high",
+        "looks_blocked_on_recon": true,
+        "response_status": 403
+      },
+      "evidence": [
+        {
+          "url": "https://opentender.eu/",
+          "status_code": 403,
+          "snippet": "\u001bF\u0015\u0000d����~YopzGi��^{\u0016\u0004\u0015\u0005\u0014���\u001e�(�$IB��Wcm���5���Gq��;Ĵ�����U����\u0012C$�\u0012ə\u0010#%�~����\u0010\u00117�N�\"\u0004$��'���y�̫\u0011J�\u0017s�e\u0017n�����׾.+\f`����8nEL��J\u001a�\u0004U\u0012/1\u0018��D�J�����m��X�W�룈CNA�V���I�������V\u000f\u001c�7j� ���oUDy&��m��\u0010�hE�r�H8L",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 1.328
+    },
+    "techstack": {
+      "name": "techstack",
+      "status": "ok",
+      "findings": {
+        "detected": [
+          {
+            "name": "Cloudflare CDN",
+            "categories": [
+              "cdn",
+              "antibot"
+            ],
+            "matched_on": [
+              "header:server",
+              "header:cf-ray"
+            ],
+            "website": "https://cloudflare.com"
+          }
+        ],
+        "by_category": {
+          "cdn": [
+            "Cloudflare CDN"
+          ],
+          "antibot": [
+            "Cloudflare CDN"
+          ]
+        },
+        "detection_count": 1
+      },
+      "evidence": [
+        {
+          "url": "https://opentender.eu/",
+          "status_code": 403,
+          "snippet": "\u001bF\u0015\u0000d�_���~�wq:�4\b�˵' ���\n.���)��b\u0017�uN_�����|�\u0002\u001e�u��\u0010�&�^\"\"Ve:CSK\f���J$gB�������BD��;���\u0010���\u0000'��W\u0003������.�\u001c�`�c���JL\u0000��^\u001d�$���PSIc�\u0000'�p\u0002P�\u0010�4���H٦/�\u0015y%�>�8�\u0014$p5�O�4;h~�Q�m��Qx��\frm��VE�g��޶q�\u0018��An\u0019\t�q",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.098
+    },
+    "jurisdiction": {
+      "name": "jurisdiction",
+      "status": "ok",
+      "findings": {
+        "tld_country": "EU",
+        "header_country": null,
+        "effective_country_guess": "EU",
+        "is_eu_eea": true,
+        "gdpr_applies_heuristic": true,
+        "has_consent_banner_markers": false,
+        "consent_banner_markers": [],
+        "note": "EU/EEA jurisdiction likely. Scraping plans should consider GDPR (legitimate-interest analysis, data minimization, no personal data collection without lawful basis)."
+      },
+      "evidence": [
+        {
+          "url": "https://opentender.eu/",
+          "status_code": 403,
+          "snippet": "\u001bF\u0015\u0000d����~YopzGi��^{����\t���q\n(B\u0016�8�������k>{\u0001���w�i\u0013O/\u0011\u0011�2���%�H�S%�3!FJ��xWus!\"n��OE\bH��O���y�̫\u0011̦Wc�e\u0017n�P�\u0012���+�\u0001��^\u001d\u001cǭ��PSIc�\u0000��\u0012s\u0002PV\u0010�4���H٦/���j��0�3���(?e����='Y��\u0003G�\u001a2ȵ��[\u0015Q��>zۦ�\u0003\u0012�\"G�e$\u001c�E�0",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.093
+    },
+    "sitemap": {
+      "name": "sitemap",
+      "status": "partial",
+      "findings": {
+        "sitemaps_found": [],
+        "sitemap_count": 0,
+        "total_url_count_estimate": 0,
+        "has_rss_feed": false,
+        "note": "No sitemap or RSS feed detected at common paths."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 0.588
+    },
+    "bulkdata": {
+      "name": "bulkdata",
+      "status": "partial",
+      "findings": {
+        "on_site_endpoints": [],
+        "national_registry_hits": [
+          {
+            "country": "EU",
+            "registry_search_url": "https://data.europa.eu/data/datasets?query=opentender",
+            "http_status": 200,
+            "appears_listed": false,
+            "note": "No clear match in search results."
+          }
+        ],
+        "any_bulkdata_signal": false,
+        "highest_value_finding": null,
+        "note": "No obvious bulk-data endpoint or registry listing. Manual confirmation recommended for high-value targets."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 2.044
+    },
+    "tos": {
+      "name": "tos",
+      "status": "partial",
+      "findings": {
+        "pages_found": [],
+        "scraping_keywords_hit": [],
+        "languages_detected": [],
+        "note": "No TOS / Terms / legal page found at common paths."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 0.532
+    },
+    "discovery": {
+      "name": "discovery",
+      "status": "ok",
+      "findings": {
+        "strategies": [
+          {
+            "name": "manual_inspection_required",
+            "score": "unknown",
+            "reason": "No obvious discovery primitive detected. Manual exploration needed."
+          }
+        ],
+        "forms": {
+          "form_count": 0,
+          "search_form": null,
+          "has_alphabet_links": false
+        },
+        "pagination": {
+          "has_pagination": false,
+          "pattern": null
+        },
+        "id_enum": {
+          "likely": false
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://opentender.eu/",
+          "status_code": 403,
+          "snippet": "\u001bF\u0015\u0000d����~YopzGiȆkϒT\u0014P\u0001\u0003�G\u001d�H�\u0012�T_�����|�\u0002\u001e�u��\u0010�&�^\"\"Ve:CSK\f���J$gB�������BD��;���\u0010��럠N\u0013�U3o&0�_�ɗ]�9���:�_���\u0011�Xޫ���\u00151\u0015j*i�\u0013�i�F�\u0000�\u0015�7\u001a�ed�lӗĲ��<\u001fF\u001cr\u0006R���L�\u001f4��,˷z�(�QC\u0006���|�\"�3�GoۼrA\u00027�$���üH\u001d�Z��\u000e",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.04
+    },
+    "sampling": {
+      "name": "sampling",
+      "status": "blocked",
+      "findings": {
+        "attempted": false,
+        "reason": "Anti-bot probe reported the homepage is blocked. Sample-scrape aborted to stay polite.",
+        "latency_per_record_ms": null
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 0.0
+    }
+  }
+}

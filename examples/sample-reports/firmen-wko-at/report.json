@@ -1,0 +1,460 @@
+{
+  "target_url": "https://firmen.wko.at/",
+  "target_host": "firmen.wko.at",
+  "started_at": "2026-05-13T11:35:44.581140+00:00",
+  "finished_at": "2026-05-13T11:36:21.271676+00:00",
+  "duration_s": 36.69,
+  "scrapeprobe_version": "0.1.0",
+  "probes": {
+    "robots": {
+      "name": "robots",
+      "status": "ok",
+      "findings": {
+        "present": true,
+        "http_status": 200,
+        "size_bytes": 1103,
+        "user_agent_rules": {
+          "*": {
+            "allow": [
+              "/"
+            ],
+            "disallow": []
+          },
+          "yandex": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "teleport": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "teleportpro": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "emailcollector": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "emailsiphon": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "webbandit": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "webzip": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "webreaper": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "webstripper": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "web downloader": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "webcopier": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "offline <span class=\"il_ad\" id=\"il_ad4\">explorer</span> pro": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "httrack website copier": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "offline commander": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "leech": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "websnake": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "blackwidow": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "http weazel": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "sentibot": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "wi job roboter spider version 3": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "mj12bot": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "dotbot": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "gigabot": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          },
+          "blexbot": {
+            "allow": [],
+            "disallow": [
+              "/"
+            ]
+          }
+        },
+        "sitemaps": [
+          "https://firmen.wko.at/sitemap/sitemap_index.xml"
+        ],
+        "disallow_all": false,
+        "crawl_delay_s": null,
+        "crawl_delays_all_agents": {}
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/robots.txt",
+          "status_code": 200,
+          "snippet": "User-agent: *\r\nAllow: /\r\n\r\nUser-agent: Yandex\r\nDisallow: /\r\n\r\nUser-agent: Teleport\r\nDisallow: /\r\n \r\nUser-agent: TeleportPro\r\nDisallow: /\r\n \r\nUser-agent: EmailCollector\r\nDisallow: /\r\n \r\nUser-agent: EmailSiphon\r\nDisallow: /\r\n \r\nUser-agent: We",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.227
+    },
+    "antibot": {
+      "name": "antibot",
+      "status": "ok",
+      "findings": {
+        "wafw00f": {
+          "detected": true,
+          "identified": [],
+          "generic_signal": true
+        },
+        "signature_matches": [],
+        "overall_severity": "high",
+        "looks_blocked_on_recon": false,
+        "response_status": 200
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html lang=\"de-AT\">\r\n<head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><meta http-equiv=\"Content-Type\" content=\"text/html;&#32;charset=UTF-8\" /><title>\r\n\tBranchenbuch öst",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 2.081
+    },
+    "techstack": {
+      "name": "techstack",
+      "status": "ok",
+      "findings": {
+        "detected": [
+          {
+            "name": "Google Tag Manager",
+            "categories": [
+              "analytics"
+            ],
+            "matched_on": [
+              "html"
+            ],
+            "website": null
+          }
+        ],
+        "by_category": {
+          "analytics": [
+            "Google Tag Manager"
+          ]
+        },
+        "detection_count": 1
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html lang=\"de-AT\">\r\n<head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><meta http-equiv=\"Content-Type\" content=\"text/html;&#32;charset=UTF-8\" /><title>\r\n\tBranchenbuch öst",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.332
+    },
+    "jurisdiction": {
+      "name": "jurisdiction",
+      "status": "ok",
+      "findings": {
+        "tld_country": "AT",
+        "header_country": null,
+        "effective_country_guess": "AT",
+        "is_eu_eea": true,
+        "gdpr_applies_heuristic": true,
+        "has_consent_banner_markers": false,
+        "consent_banner_markers": [],
+        "note": "EU/EEA jurisdiction likely. Scraping plans should consider GDPR (legitimate-interest analysis, data minimization, no personal data collection without lawful basis)."
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html lang=\"de-AT\">\r\n<head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><meta http-equiv=\"Content-Type\" content=\"text/html;&#32;charset=UTF-8\" /><title>\r\n\tBranchenbuch öst",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.311
+    },
+    "sitemap": {
+      "name": "sitemap",
+      "status": "ok",
+      "findings": {
+        "sitemaps_found": [
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_index.xml",
+            "kind": "sitemap_index",
+            "url_count_estimate": 0,
+            "child_sitemap_count": 37,
+            "size_bytes": 5309,
+            "http_status": 200
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_01.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 362092,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_02.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 360256,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_03.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 358809,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_04.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 359926,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_05.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 359095,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_06.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 367816,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_07.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 50000,
+            "child_sitemap_count": 0,
+            "size_bytes": 360428,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          },
+          {
+            "url": "https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_08.xml.gz",
+            "kind": "sitemap",
+            "url_count_estimate": 11469,
+            "child_sitemap_count": 0,
+            "size_bytes": 84006,
+            "http_status": 200,
+            "parent": "https://firmen.wko.at/sitemap/sitemap_index.xml"
+          }
+        ],
+        "sitemap_count": 9,
+        "total_url_count_estimate": 361469,
+        "has_rss_feed": false
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/sitemap/sitemap_index.xml",
+          "status_code": 200,
+          "snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\r\n  <sitemap>\r\n    <loc>https://firmen.wko.at/sitemap/sitemap_suchErgebnisse_01.xml.gz</loc>\r\n",
+          "note": "sitemap_index"
+        }
+      ],
+      "error": null,
+      "duration_s": 8.89
+    },
+    "bulkdata": {
+      "name": "bulkdata",
+      "status": "partial",
+      "findings": {
+        "on_site_endpoints": [],
+        "national_registry_hits": [
+          {
+            "country": "AT",
+            "registry_search_url": "https://data.gv.at/anwendungen/",
+            "http_status": 200,
+            "appears_listed": false,
+            "note": "No clear match in search results."
+          },
+          {
+            "country": "AT",
+            "registry_search_url": "https://data.europa.eu/data/datasets?query=firmen",
+            "http_status": 200,
+            "appears_listed": false,
+            "note": "No clear match in search results."
+          }
+        ],
+        "any_bulkdata_signal": false,
+        "highest_value_finding": null,
+        "note": "No obvious bulk-data endpoint or registry listing. Manual confirmation recommended for high-value targets."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 24.987
+    },
+    "tos": {
+      "name": "tos",
+      "status": "partial",
+      "findings": {
+        "pages_found": [],
+        "scraping_keywords_hit": [],
+        "languages_detected": [],
+        "note": "No TOS / Terms / legal page found at common paths."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 12.899
+    },
+    "discovery": {
+      "name": "discovery",
+      "status": "ok",
+      "findings": {
+        "strategies": [
+          {
+            "name": "sitemap_walk",
+            "score": "high",
+            "reason": "Sitemap exposes ~361469 URLs. Cheapest, most polite path."
+          }
+        ],
+        "forms": {
+          "form_count": 0,
+          "search_form": null,
+          "has_alphabet_links": false
+        },
+        "pagination": {
+          "has_pagination": false,
+          "pattern": null
+        },
+        "id_enum": {
+          "likely": false
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://firmen.wko.at/",
+          "status_code": 403,
+          "snippet": "<html><body>\n<h1>Access Denied</h1><p>Signature ID: 0<br>Message ID: 0<br>Client IP: 77.71.177.10</p>\n</body></html>\n",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.231
+    },
+    "sampling": {
+      "name": "sampling",
+      "status": "skipped",
+      "findings": {
+        "attempted": false,
+        "reason": "No sample URLs available from sitemap or homepage links.",
+        "latency_per_record_ms": null
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 0.246
+    }
+  }
+}

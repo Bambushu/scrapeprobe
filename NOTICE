@@ -1,0 +1,17 @@
+ScrapeProbe attribution notices
+================================
+
+ScrapeProbe is licensed under the MIT License. It bundles or depends on
+third-party software:
+
+1. wafw00f (Web Application Firewall Detection Tool)
+   Source: https://github.com/EnableSecurity/wafw00f
+   License: BSD-3-Clause
+   Used as a runtime dependency. Not bundled.
+
+2. Python dependencies (httpx, beautifulsoup4, click, rich, tldextract, lxml)
+   Each ships under its own permissive license (MIT / BSD / PSF).
+
+The tech fingerprint database at src/scrapeprobe/data/techstack.json is
+original work by the author, hand-curated under MIT. Its schema is
+inspired by Wappalyzer but no Wappalyzer signatures were copied.

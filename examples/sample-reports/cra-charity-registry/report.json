@@ -1,0 +1,226 @@
+{
+  "target_url": "https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyAdvncdSrch",
+  "target_host": "apps.cra-arc.gc.ca",
+  "started_at": "2026-05-13T11:36:21.462320+00:00",
+  "finished_at": "2026-05-13T11:37:10.166825+00:00",
+  "duration_s": 48.704,
+  "scrapeprobe_version": "0.1.0",
+  "probes": {
+    "robots": {
+      "name": "robots",
+      "status": "partial",
+      "findings": {
+        "present": false,
+        "http_status": 404,
+        "user_agent_rules": {},
+        "sitemaps": [],
+        "disallow_all": false,
+        "crawl_delay_s": null
+      },
+      "evidence": [
+        {
+          "url": "https://apps.cra-arc.gc.ca/robots.txt",
+          "status_code": 404,
+          "snippet": "<!DOCTYPE html>\r\n<!--[if lt IE 9]><html class=\"no-js lt-ie9\" lang=\"en\"><![endif]-->\r\n<!--[if gt IE 8]><!-->\r\n<html class=\"no-js\" lang=\"en\">\r\n<!--<![endif]-->\r\n<head>\r\n<meta charset=\"utf-8\"/>\r\n<title>File not found / Fichier introuvable</tit",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 0.649
+    },
+    "antibot": {
+      "name": "antibot",
+      "status": "ok",
+      "findings": {
+        "wafw00f": {
+          "detected": true,
+          "identified": [
+            "BIG-IP AppSec Manager (F5 Networks)"
+          ],
+          "generic_signal": true
+        },
+        "signature_matches": [],
+        "overall_severity": "high",
+        "looks_blocked_on_recon": false,
+        "response_status": 200
+      },
+      "evidence": [
+        {
+          "url": "https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyAdvncdSrch",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" data-beasties-container>\r\n<head>\r\n    <base href=\"/ebci/hacc/srch/pub/\">\r\n    <meta charset=\"utf-8\">\r\n    <title translate></title>\r\n    <met",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 5.955
+    },
+    "techstack": {
+      "name": "techstack",
+      "status": "ok",
+      "findings": {
+        "detected": [
+          {
+            "name": "Angular",
+            "categories": [
+              "js-framework"
+            ],
+            "matched_on": [
+              "html"
+            ],
+            "website": "https://angular.io"
+          },
+          {
+            "name": "hCaptcha",
+            "categories": [
+              "antibot"
+            ],
+            "matched_on": [
+              "scripts"
+            ],
+            "website": null
+          }
+        ],
+        "by_category": {
+          "js-framework": [
+            "Angular"
+          ],
+          "antibot": [
+            "hCaptcha"
+          ]
+        },
+        "detection_count": 2
+      },
+      "evidence": [
+        {
+          "url": "https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyAdvncdSrch",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" data-beasties-container>\r\n<head>\r\n    <base href=\"/ebci/hacc/srch/pub/\">\r\n    <meta charset=\"utf-8\">\r\n    <title translate></title>\r\n    <met",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 1.35
+    },
+    "jurisdiction": {
+      "name": "jurisdiction",
+      "status": "ok",
+      "findings": {
+        "tld_country": "CA",
+        "header_country": null,
+        "effective_country_guess": "CA",
+        "is_eu_eea": false,
+        "gdpr_applies_heuristic": false,
+        "has_consent_banner_markers": false,
+        "consent_banner_markers": [],
+        "note": "Non-EU TLD and no EU consent banner detected. GDPR may still apply if EU residents' data is collected. Confirm before scraping personal data."
+      },
+      "evidence": [
+        {
+          "url": "https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyAdvncdSrch",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" data-beasties-container>\r\n<head>\r\n    <base href=\"/ebci/hacc/srch/pub/\">\r\n    <meta charset=\"utf-8\">\r\n    <title translate></title>\r\n    <met",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 1.858
+    },
+    "sitemap": {
+      "name": "sitemap",
+      "status": "partial",
+      "findings": {
+        "sitemaps_found": [],
+        "sitemap_count": 0,
+        "total_url_count_estimate": 0,
+        "has_rss_feed": false,
+        "note": "No sitemap or RSS feed detected at common paths."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 8.311
+    },
+    "bulkdata": {
+      "name": "bulkdata",
+      "status": "partial",
+      "findings": {
+        "on_site_endpoints": [],
+        "national_registry_hits": [
+          {
+            "country": "CA",
+            "registry_search_url": "https://data.europa.eu/data/datasets?query=apps",
+            "http_status": 200,
+            "appears_listed": false,
+            "note": "No clear match in search results."
+          }
+        ],
+        "any_bulkdata_signal": false,
+        "highest_value_finding": null,
+        "note": "No obvious bulk-data endpoint or registry listing. Manual confirmation recommended for high-value targets."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 31.645
+    },
+    "tos": {
+      "name": "tos",
+      "status": "partial",
+      "findings": {
+        "pages_found": [],
+        "scraping_keywords_hit": [],
+        "languages_detected": [],
+        "note": "No TOS / Terms / legal page found at common paths."
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 9.618
+    },
+    "discovery": {
+      "name": "discovery",
+      "status": "ok",
+      "findings": {
+        "strategies": [
+          {
+            "name": "manual_inspection_required",
+            "score": "unknown",
+            "reason": "No obvious discovery primitive detected. Manual exploration needed."
+          }
+        ],
+        "forms": {
+          "form_count": 0,
+          "search_form": null,
+          "has_alphabet_links": false
+        },
+        "pagination": {
+          "has_pagination": false,
+          "pattern": null
+        },
+        "id_enum": {
+          "likely": false
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyAdvncdSrch",
+          "status_code": 200,
+          "snippet": "\r\n<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"en\" dir=\"ltr\" data-beasties-container>\r\n<head>\r\n    <base href=\"/ebci/hacc/srch/pub/\">\r\n    <meta charset=\"utf-8\">\r\n    <title translate></title>\r\n    <met",
+          "note": ""
+        }
+      ],
+      "error": null,
+      "duration_s": 1.021
+    },
+    "sampling": {
+      "name": "sampling",
+      "status": "skipped",
+      "findings": {
+        "attempted": false,
+        "reason": "No sample URLs available from sitemap or homepage links.",
+        "latency_per_record_ms": null
+      },
+      "evidence": [],
+      "error": null,
+      "duration_s": 1.098
+    }
+  }
+}

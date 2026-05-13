@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapeprobe"
+version = "0.1.0"
+description = "Open-source CLI that produces a proposal-ready recon report on a target URL's scraping characteristics."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+authors = [
+  { name = "Maikel Slomp", email = "lakem.bartolo@icloud.com" },
+]
+keywords = ["scraping", "recon", "osint", "wafw00f", "wappalyzer", "anti-bot", "web-fingerprinting"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Security",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "httpx[http2]>=0.27",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.0",
+  "click>=8.1",
+  "rich>=13.7",
+  "wafw00f>=2.3",
+  "tldextract>=5.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-httpx>=0.30",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+scrapeprobe = "scrapeprobe.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Bambushu/scrapeprobe"
+Issues = "https://github.com/Bambushu/scrapeprobe/issues"
+"By" = "https://overtell.io"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scrapeprobe"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "README.md", "LICENSE", "NOTICE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+# E501 long lines: handled by formatter, line-length 100.
+# SIM105/SIM110: try/except/pass and explicit loops read more clearly here than
+# contextlib.suppress / any() one-liners.
+ignore = ["E501", "SIM105", "SIM110"]

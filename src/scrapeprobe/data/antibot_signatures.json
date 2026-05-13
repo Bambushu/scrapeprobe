@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "note": "Complementary anti-bot signatures used alongside wafw00f. Each entry: name + match (headers/html/scripts/cookies regex) + severity (low|medium|high) for sample-scrape difficulty.",
+    "license": "MIT"
+  },
+  "Cloudflare WAF (Pro+)": {
+    "match_headers": {"cf-mitigated": ".|^challenge$"},
+    "match_html": "Just a moment\\.\\.\\.|/cdn-cgi/challenge-platform/",
+    "severity": "high",
+    "note": "Cloudflare with bot fight mode or managed challenge active. JS challenge or Turnstile may be in the path."
+  },
+  "Cloudflare CDN (passive)": {
+    "match_headers": {"cf-ray": ".", "server": "^cloudflare$"},
+    "match_html_negative": "Just a moment\\.\\.\\.",
+    "severity": "low",
+    "note": "Cloudflare in front but no active challenge on this page. Often just CDN + DDoS, not bot detection."
+  },
+  "Imperva / Incapsula": {
+    "match_headers": {"x-iinfo": ".", "x-cdn": "Imperva", "set-cookie": "(?:incap_ses|visid_incap)_"},
+    "severity": "high"
+  },
+  "Akamai Bot Manager": {
+    "match_headers": {"akamai-bm-telemetry": ".", "set-cookie": "(?:ak_bmsc|bm_sv|bm_sz|_abck)="},
+    "match_scripts": "/_bm/get_telemetry|akam/.*sensor",
+    "severity": "high"
+  },
+  "DataDome": {
+    "match_headers": {"x-datadome": ".", "set-cookie": "datadome="},
+    "match_html": "<script[^>]+datadome",
+    "severity": "high"
+  },
+  "PerimeterX / HUMAN": {
+    "match_headers": {"set-cookie": "_pxhd=|_px=|_pxff_"},
+    "match_scripts": "(?:client|captcha)\\.perimeterx\\.net|client\\.px-cdn\\.net|/_pxOrigin/",
+    "severity": "high"
+  },
+  "Kasada": {
+    "match_headers": {"x-kpsdk-cd": ".", "x-kpsdk-ct": "."},
+    "match_html": "<script[^>]+ips\\.js",
+    "severity": "high"
+  },
+  "Reblaze": {
+    "match_headers": {"server": "^Reblaze ", "x-rbz-": "."},
+    "severity": "medium"
+  },
+  "Distil / Imperva Advanced Bot": {
+    "match_headers": {"x-distil-cs": ".", "set-cookie": "D_(?:UID|HID|ZUID)="},
+    "severity": "high"
+  },
+  "F5 BIG-IP": {
+    "match_headers": {"server": "^BigIP$|^BIG-IP$", "set-cookie": "BIGipServer"},
+    "severity": "medium"
+  },
+  "Sucuri WAF": {
+    "match_headers": {"server": "^Sucuri/Cloudproxy", "x-sucuri-id": "."},
+    "severity": "medium"
+  },
+  "AWS WAF": {
+    "match_headers": {"x-amzn-waf-": ".", "x-amz-cf-id": "."},
+    "match_html": "<title>403 Forbidden</title>",
+    "severity": "medium",
+    "note": "AWS WAF is usually configured per-rule; recon may not trigger anything but POSTs or form submissions can."
+  },
+  "Generic challenge page": {
+    "match_html": "challenge-platform|JavaScript is required|Please enable JavaScript and cookies to continue",
+    "severity": "high",
+    "note": "Unbranded JS-challenge interstitial. Often Cloudflare or DataDome but may be custom."
+  }
+}
