@@ -47,6 +47,7 @@ dev = [
 
 [project.scripts]
 scrapeprobe = "scrapeprobe.cli:main"
+scrapeprobe-log = "scrapeprobe.cli:log_command"
 
 [project.urls]
 Homepage = "https://github.com/Bambushu/scrapeprobe"

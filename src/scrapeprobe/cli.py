@@ -12,6 +12,7 @@ from rich.live import Live
 from rich.table import Table
 
 from scrapeprobe import __version__
+from scrapeprobe.dogfood import LOG_PATH, append_stub, list_gigs, open_in_editor, print_log
 from scrapeprobe.probe import probe_target
 from scrapeprobe.reporting import json as json_renderer
 from scrapeprobe.reporting import markdown as md_renderer
@@ -66,6 +67,13 @@ PROBE_ORDER = [
     help="User-Agent string. Default is self-identifying.",
 )
 @click.option("--quiet", is_flag=True, help="Suppress progress UI; only print final report path.")
+@click.option(
+    "--gig",
+    "gig",
+    default=None,
+    help='Label this run as a real gig (e.g. --gig "Julianne / WKO Firmen") '
+    "and append a stub entry to ~/scrapeprobe-dogfood/log.md.",
+)
 @click.version_option(version=__version__, prog_name="scrapeprobe")
 def main(
     target: str,
@@ -75,6 +83,7 @@ def main(
     timeout: float,
     user_agent: str,
     quiet: bool,
+    gig: str | None,
 ) -> None:
     """Probe TARGET URL and produce a proposal-ready recon report.
 
@@ -157,6 +166,12 @@ def main(
 
     finished = datetime.now(UTC)
     elapsed = (finished - started).total_seconds()
+
+    if gig:
+        log_path = append_stub(gig=gig, target_url=target_url, report_path=md_path)
+        if not quiet:
+            console.print(f"DOGFOOD: appended stub for [bold]{gig}[/bold] to {log_path}")
+
     if not quiet:
         console.print(f"\n[green]Done in {elapsed:.1f}s.[/green]")
         console.print(f"REPORT: {md_path}")
@@ -164,3 +179,28 @@ def main(
             console.print(f"JSON:   {out_path / 'report.json'}")
     else:
         click.echo(str(md_path))
+
+
+@click.group(invoke_without_command=True)
+@click.option("--cat", is_flag=True, help="Print the log to stdout instead of opening in $EDITOR.")
+@click.option("--list", "list_only", is_flag=True, help="List gig titles in the log, oldest first.")
+@click.pass_context
+def log_command(ctx: click.Context, cat: bool, list_only: bool) -> None:
+    """Open the dogfood log (~/scrapeprobe-dogfood/log.md) in $EDITOR.
+
+    Use --cat to print, --list to see gig titles only.
+    """
+    if ctx.invoked_subcommand is not None:
+        return
+    if list_only:
+        titles = list_gigs()
+        if not titles:
+            click.echo(f"(No gigs logged yet. Log lives at {LOG_PATH}.)")
+            return
+        for t in titles:
+            click.echo(t)
+        return
+    if cat:
+        print_log()
+        return
+    open_in_editor()
