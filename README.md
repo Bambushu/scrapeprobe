@@ -92,8 +92,8 @@ User-Agent: ScrapeProbe/0.2.0 (+https://github.com/Bambushu/scrapeprobe)
 
 It honors `Crawl-delay` from robots.txt, caps sample scrapes at 10 records, and
 aborts on the first 429/403. It does **not** rotate proxies, spoof TLS
-fingerprints, solve captchas, or render JavaScript. That's the bypass layer;
-this is the recon layer.
+fingerprints, or solve captchas. That's the bypass layer; this is the recon
+layer.
 
 ## What's in the report
 
