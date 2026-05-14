@@ -8,6 +8,9 @@ report on a target URL's scraping characteristics. Hand it a URL, get a
 robots/sitemap analysis, discovery heuristics, a sample scrape attempt, full-run
 projections, TOS posture, and GDPR/jurisdiction flags.
 
+Dogfooded against real recon work before release — see the three sample reports
+below.
+
 It's a **recon tool**, not a bypass tool. If the target blocks a polite
 identifying request, ScrapeProbe reports that as a finding instead of trying to
 evade it.
@@ -84,7 +87,7 @@ report looks like:
 ScrapeProbe identifies itself in every request:
 
 ```
-User-Agent: ScrapeProbe/0.1.0 (+https://github.com/Bambushu/scrapeprobe)
+User-Agent: ScrapeProbe/0.2.0 (+https://github.com/Bambushu/scrapeprobe)
 ```
 
 It honors `Crawl-delay` from robots.txt, caps sample scrapes at 10 records, and

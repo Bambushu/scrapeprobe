@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "scrapeprobe"
-version = "0.1.0"
+version = "0.2.0"
 description = "Open-source CLI that produces a proposal-ready recon report on a target URL's scraping characteristics."
 readme = "README.md"
 license = { file = "LICENSE" }
