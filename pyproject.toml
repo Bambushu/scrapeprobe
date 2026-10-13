@@ -10,7 +10,7 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11"
 authors = [
-  { name = "Maikel Slomp", email = "lakem.bartolo@icloud.com" },
+  { name = "Maikel Slomp", email = "hello@mad-it.agency" },
 ]
 keywords = ["scraping", "recon", "osint", "wafw00f", "wappalyzer", "anti-bot", "web-fingerprinting"]
 classifiers = [
